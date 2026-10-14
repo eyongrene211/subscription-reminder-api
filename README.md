@@ -30,7 +30,6 @@ A production-grade backend application built with **Node.js, NestJS, TypeScript,
 - [Testing the Cron Job (Without Waiting 24h)](#testing-the-cron-job-without-waiting-24h)
 - [CSV Bulk Import Format](#csv-bulk-import-format)
 - [Interactive Swagger Docs & Postman Collection](#interactive-swagger-docs--postman-collection)
-- [Part 4: Cloud Deployment Guide (Render + Neon/PostgreSQL)](#part-4-cloud-deployment-guide)
 
 ---
 
@@ -278,30 +277,3 @@ npm run start:prod
 ### 5. Access Interactive Swagger Docs
 Open your browser at:  
 👉 **`http://localhost:5000/api`**
-
----
-
-## 🌐 Part 4: Cloud Deployment Guide
-
-### Deploying to Render + Neon/Render PostgreSQL:
-
-1. **Database Setup (Neon.tech or Render Postgres):**
-   * Create a free PostgreSQL instance on [Neon.tech](https://neon.tech) or on [Render](https://render.com).
-   * Copy the connection string (`DATABASE_URL`).
-
-2. **Web Service Setup (Render):**
-   * Push your code to GitHub.
-   * On Render, click **New + > Web Service** and select `eyongrene211/subscription-reminder-api`.
-   * Set:
-     * **Environment:** `Node`
-     * **Build Command:** `npm install && npm run build`
-     * **Start Command:** `npm run start:prod`
-   * Add Environment Variables in the Render Dashboard:
-     * `NODE_ENV` = `production`
-     * `DATABASE_URL` = `<your_cloud_postgres_connection_string>`
-     * `PORT` = `10000` (or Render's default)
-   * Click **Deploy Web Service**!
-
-3. **Verify Deployment:**
-   * Open `https://your-service.onrender.com/api` in your browser to verify Swagger UI.
-   * Test endpoints using Swagger or the provided Postman collection.
