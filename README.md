@@ -1,6 +1,21 @@
 # Subscription and Payment Reminder API 🚀
 
+[![Repository](https://img.shields.io/badge/GitHub-eyongrene211%2Fsubscription--reminder--api-blue?logo=github)](https://github.com/eyongrene211/subscription-reminder-api)
+[![NestJS](https://img.shields.io/badge/NestJS-v12-red?logo=nestjs)](https://nestjs.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql)](https://www.postgresql.org/)
+[![TypeORM](https://img.shields.io/badge/TypeORM-0.3-orange?logo=typeorm)](https://typeorm.io/)
+[![Tests](https://img.shields.io/badge/Tests-31%20Passing-brightgreen?logo=jest)](https://jestjs.io/)
+
 A production-grade backend application built with **Node.js, NestJS, TypeScript, TypeORM, and PostgreSQL**. The system empowers users to manage recurring subscriptions, automatically dispatches daily payment reminders via automated cron jobs, prevents duplicate alerts, and supports bulk CSV data imports with row-level validation.
+
+---
+
+## 🌐 Deliverables & Live Links
+* **Source Code Repository:** [https://github.com/eyongrene211/subscription-reminder-api](https://github.com/eyongrene211/subscription-reminder-api)
+* **Deployed API Public URL:** `https://subscription-reminder-api.onrender.com` *(or your custom Render URL)*
+* **Interactive Swagger UI:** `https://subscription-reminder-api.onrender.com/api` *(or `http://localhost:5000/api` locally)*
+* **Postman Collection:** [`postman_collection.json`](file:///home/rapelo47/Rapelo's%20projects/Internship%20Project/TestAssement-projects/Backend-assessment/postman_collection.json)
 
 ---
 
@@ -36,7 +51,7 @@ A production-grade backend application built with **Node.js, NestJS, TypeScript,
 ## 📂 Project Structure
 
 ```text
-Backend-assessment/
+subscription-reminder-api/
 ├── algorithms/                           # 📂 Part 1: Algorithmic Solutions & Tests
 │   ├── find-duplicates.ts                # Exercise 1: O(N) Hash Set Duplicate Finder
 │   ├── longest-substring.ts              # Exercise 2: O(N) Sliding Window Substring
@@ -228,8 +243,8 @@ psql -U <username> -d subscription_reminder_db -f schema.sql
 
 ### 1. Clone & Install Dependencies
 ```bash
-git clone <your-repo-url>
-cd Backend-assessment
+git clone https://github.com/eyongrene211/subscription-reminder-api.git
+cd subscription-reminder-api
 npm install
 ```
 
@@ -276,7 +291,7 @@ Open your browser at:
 
 2. **Web Service Setup (Render):**
    * Push your code to GitHub.
-   * On Render, click **New + > Web Service** and select your GitHub repository.
+   * On Render, click **New + > Web Service** and select `eyongrene211/subscription-reminder-api`.
    * Set:
      * **Environment:** `Node`
      * **Build Command:** `npm install && npm run build`
