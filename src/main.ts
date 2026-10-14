@@ -45,8 +45,19 @@ async function bootstrap() {
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document, {
+
+  const swaggerOptions = {
     customSiteTitle: 'Subscription Reminder API Docs',
+  };
+
+  // Mount Swagger on /api/docs (industry standard), /api, and /docs
+  SwaggerModule.setup('api/docs', app, document, swaggerOptions);
+  SwaggerModule.setup('api', app, document, swaggerOptions);
+  SwaggerModule.setup('docs', app, document, swaggerOptions);
+
+  // Friendly root redirect to /api/docs so landing on the root domain opens the docs
+  app.getHttpAdapter().get('/', (req: any, res: any) => {
+    res.redirect('/api/docs');
   });
 
   // 4. Start HTTP Server
@@ -54,7 +65,7 @@ async function bootstrap() {
   await app.listen(port);
 
   logger.log(`🚀 Application is running on: http://localhost:${port}`);
-  logger.log(`📚 Interactive Swagger API Docs: http://localhost:${port}/api`);
+  logger.log(`📚 Interactive Swagger API Docs: http://localhost:${port}/api/docs`);
 }
 
 bootstrap();
