@@ -13,8 +13,8 @@ A production-grade backend application built with **Node.js, NestJS, TypeScript,
 
 ## 🌐 Deliverables & Live Links
 * **Source Code Repository:** [https://github.com/eyongrene211/subscription-reminder-api](https://github.com/eyongrene211/subscription-reminder-api)
-* **Deployed API Public URL:** `https://subscription-reminder-api.onrender.com` *(or your custom Render URL)*
-* **Interactive Swagger UI:** `https://subscription-reminder-api.onrender.com/api` *(or `http://localhost:5000/api` locally)*
+* **Deployed API Public URL:** [https://subscription-reminder-api-5fze.onrender.com](https://subscription-reminder-api-5fze.onrender.com)
+* **Interactive Swagger UI:** [https://subscription-reminder-api-5fze.onrender.com/api](https://subscription-reminder-api-5fze.onrender.com/api)
 * **Postman Collection:** [`postman_collection.json`](file:///home/rapelo47/Rapelo's%20projects/Internship%20Project/TestAssement-projects/Backend-assessment/postman_collection.json)
 
 ---
